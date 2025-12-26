@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> call App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="app">
+        <div class="add"> 
+            <button class="addbtn">+</button>
+            <div class="arrow-container">
+                <button class="arrow up" id="upBtn">▲</button>
+                <button class="arrow down" id="downBtn">▼</button>
+            </div>
+        </div>
+        <section class="card">
+            <h1 class="title">Create new call</h1>
+
+            <form id="callForm" class="form" autocomplete="off">
+                <label class="field">
+                    <span class="label-text">image url</span>
+                    <input required id="imageUrl" name="imageUrl" type="url" placeholder="image url" />
+                </label>
+
+                <label class="field">
+                    <span class="label-text">Full Name </span>
+                    <input required id="fullName" name="fullName" type="text" placeholder="enter name" />
+                </label>
+
+                <label class="field">
+                    <span class="label-text">home town</span>
+                    <input required id="hometown" name="hometown" type="text" placeholder="enter home town" />
+                </label>
+
+                <label class="field">
+                    <span class="label-text">purpose</span>
+                    <input required id="purpose" name="purpose" type="text" placeholder="" />
+                </label>
+
+                <div class="colors">
+                    <div class="color-option">
+                        <input type="radio" id="colorRed" name="color" value="#e03131" checked>
+                        <label for="colorRed">red</label>
+                    </div>
+                    <div class="color-option">
+                        <input type="radio" id="colorGreen" name="color" value="#2aa34a">
+                        <label for="colorGreen">green</label>
+                    </div>
+                    <div class="color-option">
+                        <input type="radio" id="colorYellow" name="color" value="#f0c330">
+                        <label for="colorYellow">yellow</label>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="createBtn" class="btn primary">create note</button>
+                    <button type="button" id="cancelBtn" class="btn">cancel</button>
+                </div>
+            </form>
+
+            <div id="previewContainer" class="preview-container" aria-live="polite"></div>
+            <!-- Example contact card (matches the provided mock) -->
+
+            <div id="cardsContainer" class="cards-container">
+
+            </div>
+
+           
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
